@@ -1,172 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.71" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
 
-<head>
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="huan li">
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    <title>TEQ: An Open and Developer-friendly Testbed for Edge Computing based Query Processing Algorithms</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
-    <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
-    <link rel="icon" sizes="64x64" href="img/favicon-64x64.png">
-    <link rel="apple-touch-icon" sizes="64x64" href="img/favicon-64x64.png">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-
-<body id="page-top">
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">Project TEQ</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#page-top">About</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#video">Video</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#dataset">Resources</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-  <header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>T. E. Q. --- to ease query-algorithm-developers</h1>
-            <h2>An Open and Developer-friendly Testbed for Edge-based Query Processing Algorithms</h1>
-            <hr>
-            <p>
-                Edge computing is ideally suited for querying populations of fast data streams. However, developing and evaluating edge-based query processing algorithms is challenging due to the decentralized setting and the lack of effective tools. For example, current simulators fail to execute real queries. To rectify these shortcomings, we propose TEQ, a testbed for edge-based query processing algorithms, designed expressly to be open, enabling extensible simulation and algorithm deployment, and to be developer-friendly, simplifying otherwise cumbersome simulation, complex algorithm management, and tedious evaluation. TEQ encompasses novel techniques to achieve these capabilities, including (1) a streamlined framework for implementing decentralized algorithms as modular, Docker-based executables; (2) data and query playback controls to enable reproducible and consistent evaluations; and (3) mechanisms for transforming runtime metrics into system-wide metrics desired by algorithm developers.Currently in the open-source process, TEQ aims to foster community contributions and drive innovation in edge-based query processing.            </p>
-            <a href="#video" class="btn btn-primary btn-xl page-scroll">See the video</a>
-        </div>
-    </div>
-</header>
-
-  <section id="video">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Video</h2>
-<!--                 &#8595; is a placeholder -->
-                <hr class="primary">
-                <div style="width:800px;padding:0;margin:auto; display:flex;justify-content:center;">
-                <iframe width="800"
-                height="450"
-                src="https://www.youtube.com/embed/89XmYtMWHZY?si=i27JIWe6JyJaJW99" 
-                frameborder="0"
-                allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-
-    </div>
-</section>
-
-  <section id="dataset" class="bg-primary" >
-      <div class="container text-center">
-          <div class="call-to-action">
-              <h2>Resources</h2>
-              <hr class="primary">
-              <a href="#" target="_blank" class="btn btn-default btn-xl wow bounceIn" style="padding-left:60px;padding-right:60px;">REPORT</a>
-              <a href="#" target="_blank" class="btn btn-default btn-xl wow bounceIn" style="padding-left:60px;padding-right:60px;">CODEBASE</a>
-          </div>
-      </div>
-</section>
-
-  <section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Contact</h2>
-                <hr class="primary">
-            </div>
-        <div class="col-lg-3 col-lg-offset-3 text-center">
-            <a href="mailto:lihuan.cs@zju.edu.cn">
-            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>lihuan.cs@zju.edu.cn</p>
-            </a>
-        </div>
-        <div class="col-lg-3 col-lg-offset-0 text-center">
-            <a href="https://github.com/SuDIS-ZJU">
-            <i class="fa fa-github fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>sudis-zju</p>
-            </a>
-        </div>
-
-        <div class="text-center">
-
-        </div>
-
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-<!--             <br /> -->
-<!--             Zhejiang University - SUSTech - Roskilde University<br/> -->
-            <p>This website is powered by Jekyll with theme <a href="https://github.com/volny/creative-theme-jekyll" target="_blank">creative</a>; last updated in Jan 2024.</p>
-        </div>
-
-    </div>
-</section>
-
-  <!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/wow.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="js/creative.js"></script>
-
-</body>
-
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <meta property="og:url" content="https://sudis-zju.github.io/teq/"><meta property="og:site_name" content="Project TEQ"><meta property="og:title" content="Home"><meta property="og:type" content="website"><meta property="og:locale" content="en-US"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Home"}</script><title>Home | Project TEQ</title><meta name="description" content="TEQ ">
+    <link rel="preload" href="/assets/style-5NS_NO8l.css" as="style"><link rel="stylesheet" href="/assets/style-5NS_NO8l.css">
+    <link rel="modulepreload" href="/assets/app-bAbiavn9.js"><link rel="modulepreload" href="/assets/index.html-qkT-LgoS.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/portfolio.html-DrZTsAkb.js" as="script"><link rel="prefetch" href="/assets/index.html-CVGsEdlU.js" as="script"><link rel="prefetch" href="/assets/portfolio.html-Bu0J-avu.js" as="script"><link rel="prefetch" href="/assets/index.html-KG8meyEE.js" as="script"><link rel="prefetch" href="/assets/customize.html-CdOHd2IV.js" as="script"><link rel="prefetch" href="/assets/index.html-BQLT20lE.js" as="script"><link rel="prefetch" href="/assets/customize.html-dzyZsN3Y.js" as="script"><link rel="prefetch" href="/assets/index.html-DkNUxhot.js" as="script"><link rel="prefetch" href="/assets/architecture.html-D1TzwsBk.js" as="script"><link rel="prefetch" href="/assets/index.html-g-a2XW36.js" as="script"><link rel="prefetch" href="/assets/disable.html-XsFdM0HM.js" as="script"><link rel="prefetch" href="/assets/encrypt.html-D7hZbNgx.js" as="script"><link rel="prefetch" href="/assets/layout.html-DoXZvofX.js" as="script"><link rel="prefetch" href="/assets/markdown.html-wJtnaLEU.js" as="script"><link rel="prefetch" href="/assets/page.html-CvLoAE5B.js" as="script"><link rel="prefetch" href="/assets/index.html-B9LGHhem.js" as="script"><link rel="prefetch" href="/assets/index.html-DVRwWhuH.js" as="script"><link rel="prefetch" href="/assets/baz.html-CzNw6zWg.js" as="script"><link rel="prefetch" href="/assets/index.html-BTl7GgHz.js" as="script"><link rel="prefetch" href="/assets/ray.html-rKWGqlmQ.js" as="script"><link rel="prefetch" href="/assets/index.html-Dq-OyIkW.js" as="script"><link rel="prefetch" href="/assets/404.html-DySap2j9.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-DXWKOczD.js" as="script"><link rel="prefetch" href="/assets/prod-B2NWG2EQ.js" as="script"><link rel="prefetch" href="/assets/prod-B2NWG2EQ.js" as="script"><link rel="prefetch" href="/assets/vidstack-audio-BFCVzKcP.js" as="script"><link rel="prefetch" href="/assets/vidstack-video-CbNu51m1.js" as="script"><link rel="prefetch" href="/assets/vidstack-hls-D17YBRdr.js" as="script"><link rel="prefetch" href="/assets/vidstack-dash-CnNlEjLC.js" as="script"><link rel="prefetch" href="/assets/vidstack-vimeo-DcWiSUCX.js" as="script"><link rel="prefetch" href="/assets/vidstack-krOAtKMi-C3UUF7YD.js" as="script"><link rel="prefetch" href="/assets/vidstack-youtube-rSbaoocQ.js" as="script"><link rel="prefetch" href="/assets/vidstack-Zc3I7oOd-CA6XwpqT.js" as="script"><link rel="prefetch" href="/assets/vidstack-CWDlegKy-Dqhurjqy.js" as="script"><link rel="prefetch" href="/assets/vidstack-D0D6ufFF-UfKBh4FI.js" as="script"><link rel="prefetch" href="/assets/vidstack-player-default-layout-DgQ0ZJbF.js" as="script"><link rel="prefetch" href="/assets/vidstack-player-ui-mEKPAItH.js" as="script"><link rel="prefetch" href="/assets/vidstack-QR8zGkwr-DyIy1LCD.js" as="script"><link rel="prefetch" href="/assets/setupDevtools-7MC2TMWH-CFww_ctg.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">Skip to main content</a><!--]--><div class="theme-container no-sidebar external-link-icon" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="Take me home"><!----><!----><span class="vp-site-name">Project TEQ</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link route-link-active auto-link" href="/" aria-label="Home" iconsizing="height"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:house" height="1em" sizing="height"></iconify-icon><!--]-->Home<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/docs/" aria-label="Docs" iconsizing="height"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:book" height="1em" sizing="height"></iconify-icon><!--]-->Docs<!----></a></div></nav><!--]--></div><div class="vp-navbar-end"><!--[--><!----><div class="vp-nav-item vp-action"><a class="vp-action-link" href="https://github.com/SuDIS-ZJU/teq" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="icon github-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="github icon" name="github" style="width:1.25rem;height:1.25rem;vertical-align:middle;"><path d="M511.957 21.333C241.024 21.333 21.333 240.981 21.333 512c0 216.832 140.544 400.725 335.574 465.664 24.49 4.395 32.256-10.07 32.256-23.083 0-11.69.256-44.245 0-85.205-136.448 29.61-164.736-64.64-164.736-64.64-22.315-56.704-54.4-71.765-54.4-71.765-44.587-30.464 3.285-29.824 3.285-29.824 49.195 3.413 75.179 50.517 75.179 50.517 43.776 75.008 114.816 53.333 142.762 40.79 4.523-31.66 17.152-53.377 31.19-65.537-108.971-12.458-223.488-54.485-223.488-242.602 0-53.547 19.114-97.323 50.517-131.67-5.035-12.33-21.93-62.293 4.779-129.834 0 0 41.258-13.184 134.912 50.346a469.803 469.803 0 0 1 122.88-16.554c41.642.213 83.626 5.632 122.88 16.554 93.653-63.488 134.784-50.346 134.784-50.346 26.752 67.541 9.898 117.504 4.864 129.834 31.402 34.347 50.474 78.123 50.474 131.67 0 188.586-114.73 230.016-224.042 242.09 17.578 15.232 33.578 44.672 33.578 90.454v135.85c0 13.142 7.936 27.606 32.854 22.87C862.25 912.597 1002.667 728.747 1002.667 512c0-271.019-219.648-490.667-490.71-490.667z"></path></svg></a></div><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"></ul><!----></aside><!--[--><main id="main-content" class="vp-page vp-project-home" aria-labelledby="main-title"><!----><header class="vp-hero-info-wrapper"><!--[--><div class="vp-hero-mask light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/6-light.svg);background-attachment:fixed;"></div><div class="vp-hero-mask dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/6-dark.svg);background-attachment:fixed;"></div><!--]--><div class="vp-hero-info"><!--[--><img class="vp-hero-image" style="" src="/logo.svg" alt="To Ease Query-algorithm Developers"><!--]--><div class="vp-hero-infos"><h1 id="main-title" class="vp-hero-title">To Ease Query-algorithm Developers</h1><p id="main-description">An Open and Developer-friendly Testbed for Edge-based Query Processing Algorithms</p><p class="vp-hero-actions"><a class="route-link auto-link vp-hero-action primary no-external-link-icon" href="#video-section" aria-label="Vedio" iconsizing="both"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:play" width="1em" height="1em" sizing="both"></iconify-icon><!--]-->Vedio<!----></a><a class="route-link auto-link vp-hero-action default no-external-link-icon" href="/docs/" aria-label="Docs" iconsizing="both"><!---->Docs<!----></a></p></div></div></header><!--[--><div class="vp-highlight-wrapper" style=""><div class="vp-highlight-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/3-light.svg);"></div><div class="vp-highlight-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/3-dark.svg);"></div><div class="vp-highlight"><!--[--><img class="vp-highlight-image" src="/assets/image/box.svg" alt><!----><!--]--><!--[--><div class="vp-highlight-info-wrapper"><div class="vp-highlight-info"><h2 class="vp-highlight-header">Easy to Use</h2><!----><ul class="vp-highlights"><li class="vp-highlight-item-wrapper"><div class="vp-highlight-item"><h3 class="vp-highlight-title"><!----><span>TEQ simplifies coding by enabling users to focus on high-level logic abstracting away concrete implementations of simulated devices and their networking</span></h3><!----></div></li><li class="vp-highlight-item-wrapper"><div class="vp-highlight-item"><h3 class="vp-highlight-title"><!----><span>TEQ integrates runtime control, configuration and data analysis into a cross-platform Web application</span></h3><!----></div></li></ul></div></div><!--]--></div></div><div class="vp-feature-wrapper"><div class="vp-feature-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/2-light.svg);background-repeat:repeat;background-size:initial;"></div><div class="vp-feature-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/2-dark.svg);background-repeat:repeat;background-size:initial;"></div><div class="vp-feature" style=""><!--[--><img class="vp-feature-image" src="/assets/image/advanced.svg" alt><!----><!--]--><!--[--><h2 class="vp-feature-header">Highly Extensible</h2><p class="vp-feature-description">You can extend almost every module of TEQ to adapt to your own algorithm</p><!--]--><div class="vp-features"><a class="route-link vp-feature-item link" href="/docs/metrics/" aria-label="Customized Metrics"><h3 class="vp-feature-title"><iconify-icon class="vp-icon" icon="fa6-solid:chart-simple" height="1em" sizing="height"></iconify-icon><span>Customized Metrics</span></h3><p class="vp-feature-details">Collect, transform and display your metrics easily</p></a><a class="route-link vp-feature-item link" href="/docs/configuration/" aria-label="Extensible Config"><h3 class="vp-feature-title"><iconify-icon class="vp-icon" icon="fa6-solid:gear" height="1em" sizing="height"></iconify-icon><span>Extensible Config</span></h3><p class="vp-feature-details">Adjust your own configuration in a GUI</p></a><a class="route-link vp-feature-item link" href="/docs/development/architecture.html" aria-label="Flexible Architecture"><h3 class="vp-feature-title"><iconify-icon class="vp-icon" icon="fa6-solid:sitemap" height="1em" sizing="height"></iconify-icon><span>Flexible Architecture</span></h3><p class="vp-feature-details">Add your own layers and nodes in the simulator model</p></a></div></div></div><div class="vp-highlight-wrapper" style=""><div class="vp-highlight-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/9-light.svg);"></div><div class="vp-highlight-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/9-dark.svg);"></div><div class="vp-highlight"><!--[--><img class="vp-highlight-image" src="/assets/image/layout.svg" alt><!----><!--]--><!--[--><div class="vp-highlight-info-wrapper"><div class="vp-highlight-info"><h2 class="vp-highlight-header">Real-time Control and Monitoring</h2><p class="vp-highlight-description">An integrated user interface is here!</p><ul class="vp-highlights"><li class="vp-highlight-item-wrapper link"><a class="route-link vp-highlight-item link" href="/docs/development/architecture.html" aria-label="Controller"><h3 class="vp-highlight-title"><iconify-icon class="vp-icon vp-highlight-icon" icon="fa6-solid:computer" height="1em" sizing="height"></iconify-icon><span>Controller</span></h3><p class="vp-highlight-details">Restart the simulation and monitor the backend logs easily</p></a></li><li class="vp-highlight-item-wrapper link"><a class="route-link vp-highlight-item link" href="/docs/development/architecture.html" aria-label="Configurator"><h3 class="vp-highlight-title"><iconify-icon class="vp-icon vp-highlight-icon" icon="fa6-solid:gear" height="1em" sizing="height"></iconify-icon><span>Configurator</span></h3><p class="vp-highlight-details">Adjust node properties in real-time</p></a></li><li class="vp-highlight-item-wrapper link"><a class="route-link vp-highlight-item link" href="/docs/development/architecture.html" aria-label="Visualizer"><h3 class="vp-highlight-title"><iconify-icon class="vp-icon vp-highlight-icon" icon="fa6-solid:chart-line" height="1em" sizing="height"></iconify-icon><span>Visualizer</span></h3><p class="vp-highlight-details">Always check the latest developments in the simulator</p></a></li></ul></div></div><!--]--></div></div><div class="vp-highlight-wrapper" style=""><div class="vp-highlight-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/4-light.svg);background-attachment:fixed;"></div><div class="vp-highlight-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/4-dark.svg);background-attachment:fixed;"></div><div class="vp-highlight"><!--[--><!----><!----><!--]--><!--[--><div class="vp-highlight-info-wrapper"><div class="vp-highlight-info"><h2 class="vp-highlight-header"><div id="video-section" style="text-align: center;">
+  Introduction Video
+</div>
+</h2><p class="vp-highlight-description"><div style="text-align: center; margin: 20px 0;">
+   <iframe
+     width="800"
+     height="450"
+     src="https://www.youtube.com/embed/89XmYtMWHZY?si=KHLOT21rTao32Ytj"
+     title="VidStack YouTube Demo"
+     frameborder="0"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+     allowfullscreen
+     style="display: block; margin: 0 auto;"
+   ></iframe>
+ </div>
+</p><ul class="vp-highlights"></ul></div></div><!--]--></div></div><div class="vp-highlight-wrapper" style=""><div class="vp-highlight-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/1-light.svg);"></div><div class="vp-highlight-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/1-dark.svg);"></div><div class="vp-highlight"><!--[--><img class="vp-highlight-image" src="/assets/image/features.svg" alt><!----><!--]--><!--[--><div class="vp-highlight-info-wrapper"><div class="vp-highlight-info"><h2 class="vp-highlight-header">Resources</h2><!----><ul class="vp-highlights"><li class="vp-highlight-item-wrapper link"><a class="route-link vp-highlight-item link" href="/" aria-label="REPORT"><h3 class="vp-highlight-title"><iconify-icon class="vp-icon vp-highlight-icon" icon="fa6-solid:bug" height="1em" sizing="height"></iconify-icon><span>REPORT</span></h3><!----></a></li><li class="vp-highlight-item-wrapper link"><a class="route-link vp-highlight-item link" href="/" aria-label="CODEBASE"><h3 class="vp-highlight-title"><iconify-icon class="vp-icon vp-highlight-icon" icon="fa6-solid:code" height="1em" sizing="height"></iconify-icon><span>CODEBASE</span></h3><!----></a></li></ul></div></div><!--]--></div></div><div class="vp-highlight-wrapper" style=""><div class="vp-highlight-bg light" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/5-light.svg);"></div><div class="vp-highlight-bg dark" style="background-image:url(https://theme-hope-assets.vuejs.press/bg/5-dark.svg);"></div><div class="vp-highlight"><!--[--><!----><!----><!--]--><!--[--><div class="vp-highlight-info-wrapper"><div class="vp-highlight-info"><h2 class="vp-highlight-header"><div style="text-align: center; transform: translateX(-30px);">
+  Contact
+</div>
+</h2><p class="vp-highlight-description"><div style="margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 150px; transform: translateX(-30px);">
+<div style="display: flex; align-items: center; padding: 20px; border-radius: 10px;">
+  <a href="mailto:lihuan.cs@zju.edu.cn" style="text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; margin: 50px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <span style="font-size: 18px;">lihuan.cs@zju.edu.cn</span>
+  </a>
+  <a href="https://github.com/SuDIS-ZJU" style="text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; margin: 50px;">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" style="width: 50px; height: 50px; margin-bottom: 10px;">
+    <span class="myherf" style="font-size: 18px;" >SuDIS-ZJU</span>
+  </a>
+</div>
+</div>
+</p><ul class="vp-highlights"></ul></div></div><!--]--></div></div><!--]--><!----><div class="theme-hope-content" vp-content></div><!----></main><!--]--><footer class="vp-footer-wrapper" vp-footer><div class="vp-footer">Theme by <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a></div><!----></footer></div><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-bAbiavn9.js" defer></script>
+  </body>
 </html>
